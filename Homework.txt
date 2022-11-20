@@ -1,0 +1,106 @@
+▶git conifg --list 깃에관한 환경설정이 저장된 곳
+git conifg --global -e 파일로 열어보고 싶으면?
+
+▶터미널에서 code라는 명령어로 visual stoudio를 열고싶다면 운영체제에 맞게 설정하는 방법이 달라지는 것 인터넷검색
+
+▶커맨드 팔렛툴에서 code라고 입력하면 shell 커맨드에 설정할 수 있는 명령어가 나온다.
+
+▶code를 editor와 연동해서 사용
+git config --global core.editor "code" 에디터창을 띄우면 gitconfig창이 띄워짐
+git config --global core.editor "code --wait"
+열어진 파일이 종료되기 이전에는 다른 명령어를 수행할 수 없다. 저장하고 close를 누르면 terminal을 이용 할 수 있다.
+
+▶git config --global user.name "" ""에 이름설정
+git config --global user.email "" ""에 이메일작성
+
+▶git config --global core.autocrlf true/input 윈도우/맥
+새로운 줄바꿈을할 때 문자열이 달라짐
+carriage-rturn
+윈도우 text \r\n
+윈도우 \n
+
+▶git config
+git commit
+git add
+등 git 명령어 형식으로 이루어져 있다.
+
+git add -option
+
+▶깃공식 사이트 다큐멘테이션 명령어 확인
+
+▶저장소를 초기화하기 위해 사용하는 명령어 git init
+
+.이 있으면 숨겨진 폴더
+
+git status 깃의 상태를 보는 명령어
+git config --global alias.st status
+git st만 작성해도 status가 실행된다.
+git --h
+
+▶깃허브와 같은 서버에 push해서 서버에 업로드 할 수 있다.
+서버에서 local로 이동할 때는 pull
+
+working directory
+untracked
+tracked modified/unmodified
+
+▶echo 내용 > a.txt 는 내용을 가진 text파일을 생성한다.
+echo 내용 >>a.txt는 수정
+->modifed 상태가 된다.
+▶ 스테이징(staging) git add 파일이름
+git add .txt txt 확장자를 가진 파일을 모두 staging한다.
+git add 모든파일이 staging area로 이동한다.
+git add . 모든파일들을 포함해서 staging area로 이동한다.
+▶git rm --cached *
+
+▶추가하고 싶지 않은 파일이 있다면 깃이그노에 파일에 두면된다.
+log파일은 추가하지 않는다. echo *.log> .gitignore
+
+▶git status -h
+모든옵션 확인가능
+기본적으로 --long이라는 옵션이 적용됨.
+-s short
+-b branch
+
+▶git diff
+staging area와 working directory에 변경된 내용을 확인할 수있는 방법
+
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+a/c.txt b/c.txt a는 이전버전 b는 현재버전
+
+-는 이전
+git diff --staged
+
+git config --global -e
+
+git commit
+Title Description을 작성한 다음에 저장한다.
+
+git commit -m "" ""에 커밋메시지를 적고 커밋한다.
+
+git commit -am "" working directory에잇는 모든 파일을 메세지를 작성하고 커밋한다.
+
+소스트리
+▶설정 원격 추가
+연결하고 싶은 원격 리포트리 git hub의 url 복붙
+▶원격 이름 : origin 을 적어주세요. origin 은 원격에 연결하는 저장소를 말할 때 일컫는 이름이에요. 아하 보통 이렇게 쓰는구나 하고 넘어가시면 됩니다!
+▶브랜치 -> main
+▶푸시
+▶commits 클릭
+▶pull-> 로컬 repo commit-> push 충돌을 줄이기 위한
+▶원격 repo -> 내 컴퓨터 clone 한다고함.
+
+●터미널용어●
+$ mkdir [디렉토리명]
+$ mkdir -p [디렉토리명/디렉토리명/디렉토리명...] : 여러 디렉토리 생성 폴더생성
+$ rm -r [디렉토리명] : 디렉토리 삭제
+$ cd [디렉토리명] 디렉토리변경
+cd .. : 부모 디렉토리로 이동
+ls 현재 경로에 존재하는 파일/폴더 확인하기
+$ pwd : 현재 위치 확인
+
+profile
+라형선
